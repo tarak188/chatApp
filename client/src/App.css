@@ -1,0 +1,261 @@
+.App {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Open Sans", sans-serif;
+  display: grid;
+  place-items: center;
+  background-color: pink;
+}
+body {
+  margin: 0%;
+  padding: 0%;
+  border: 2px white;
+  background-color: black;
+}
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
+
+.joinChatContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border: 2px solid black; 
+  border-radius: 10px; 
+  padding: 30px; 
+  backdrop-filter: blur(10px); 
+  background-clip: padding-box; 
+}
+
+
+
+.joinChatContainer h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+.joinChatContainer input {
+  width: 210px;
+  height: 40px;
+  margin: 7px;
+  border: 2px solid #43a047;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.joinChatContainer button {
+  width: 225px;
+  height: 50px;
+  margin: 7px;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 16px;
+  background: #ffd700;
+  color: #fff;
+  cursor: pointer;
+}
+
+.joinChatContainer button:hover {
+  background: black;
+  color: #ffd700;
+}
+
+.chat-window {
+  margin-top: 10px;
+  width: 300px;
+  height: 420px;
+  background-image: none;
+  background-color: lightgreen;
+}
+
+.chat-window p {
+  margin: 0;
+}
+.chat-window .chat-header {
+  height: 45px;
+  border-radius: 6px;
+  background: brown;
+  position: relative;
+  cursor: pointer;
+}
+.chat-window .chat-header p {
+  display: block;
+  padding: 0 1em 0 2em;
+  color: white;
+  font-weight: 700;
+  line-height: 45px;
+}
+
+.chat-window .chat-body {
+  height: calc(450px - (45px + 70px));
+  border: 1px solid #263238;
+  background :wheat;
+
+  position: relative;
+}
+.chat-window .chat-body .message-container {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.chat-window .chat-body .message-container::-webkit-scrollbar {
+  display: none;
+}
+.chat-window .chat-body .message {
+  height: auto;
+  padding: 10px;
+  display: flex;
+}
+
+.chat-window .chat-body .message .message-content {
+  width: auto;
+  height: auto;
+  min-height: 40px;
+  max-width: 120px;
+  background-color: #43a047;
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+  margin-left: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+#you {
+  justify-content: flex-start;
+}
+
+#you .message-content {
+  justify-content: flex-start;
+}
+
+#you .message-meta {
+  justify-content: flex-start;
+  margin-left: 5px;
+}
+
+#other {
+  justify-content: flex-end;
+}
+
+#other .message-content {
+  justify-content: flex-end;
+  background-color: cornflowerblue;
+}
+
+#other .message-meta {
+  justify-content: flex-end;
+  margin-right: 5px;
+}
+
+.message-meta #author {
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.chat-window .chat-body .message .message-meta {
+  display: flex;
+  font-size: 12px;
+}
+
+.chat-window .chat-footer {
+  height: 40px;
+  border: 1px solid #263238;
+  border-top: none;
+  display: flex;
+}
+
+.chat-window .chat-footer input {
+  height: 100%;
+  flex: 85%;
+  border: 0;
+  padding: 0 0.7em;
+  font-size: 1em;
+  border-right: 1px dotted #607d8b;
+
+  outline: none;
+  font-family: "Open Sans", sans-serif;
+}
+
+.chat-window .chat-footer button {
+  border: 0;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  flex: 15%;
+  height: 100%;
+  background: transparent;
+  outline: none;
+  font-size: 25px;
+  color: lightgray;
+}
+
+.chat-window .chat-footer button:hover {
+  color: #43a047;
+}
+.hide {
+  opacity: 0 !important;
+}
+.genders {
+  display: flex;
+  align-items: center;
+  height: 10px;
+  width: 10px;
+  padding-top: 10PX;
+  padding-bottom: 10px;
+  color: white;
+}
+.secnd{
+  color: white;
+  position: absolute;
+  right: 5PX;
+  top: 25%;
+  ;
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 10px;
+  font-family: cursive; 
+}
+@media (max-width: 768px) {
+  .App {
+    background-size: 100%;
+  }
+  .secnd {
+    display: none; 
+  }
+}
+.dot{
+  position: absolute;
+right: 274px;
+top:  15PX;
+height: 15px;
+}
+.file1{
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  left: 825PX;
+  margin-top: 7PX;
+  cursor: pointer;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000; /* Ensure popup appears on top */
+}
+
+
+
